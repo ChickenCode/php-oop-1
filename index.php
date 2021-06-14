@@ -7,6 +7,7 @@ class Movie {
     public $director;
     public $language;
     public $price;
+    public $discount;
 
 
     //methods
@@ -17,7 +18,7 @@ class Movie {
             $discount = 5;
         }
 
-        return $discount;
+        return $this->discount = $discount;
     } 
 
 
@@ -36,8 +37,12 @@ class Movie {
 $shreck = new Movie("Shreck", 95, "Vichy Jenson", "eng", 15);
 $mulan = new Movie("Mulan", 120, "Niki Cairo", "eng", 15);
 
+$mulan -> getDiscount(10);
+
 var_dump($shreck);
 var_dump($mulan);
+
+
 
 
 ?>
